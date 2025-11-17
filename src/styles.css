@@ -1,0 +1,136 @@
+:root {
+  --dark-green: #143224;
+  --navy: #0a124c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+}
+
+nav {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 1.5rem;
+  border: none;
+  background-color: transparent;
+
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--dark-green);
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 0 10rem;
+  width: 100%;
+}
+
+.home.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.picture {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.picture.banner {
+  background-image: url(./wooden-house.jpg);
+}
+
+.home .text {
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+h1 {
+  color: var(--navy);
+}
+
+.menu.container {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 15rem);
+  place-content: center;
+  gap: 4rem;
+}
+
+.menu-card {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  column-gap: 5rem;
+}
+
+.picture.food {
+  border-radius: 0.75rem;
+}
+
+.potato-soup .picture.food {
+  background-image: url(./potato-soup-set.png);
+}
+
+.tomato-soup .picture.food {
+  background-image: url(./tomato-soup-set.png);
+}
+
+.food-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-description {
+  flex-basis: 11rem;
+  max-width: 33rem;
+  line-height: 1.3rem;
+}
+
+.about.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.about.text {
+  white-space: pre-line;
+
+  display: grid;
+  grid-template-rows: 5rem 30rem;
+  place-content: center;
+}
+
+.picture.grocery {
+  background-image: url(./grocery-v2-bew.png);
+}
